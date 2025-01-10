@@ -44,8 +44,7 @@ public class ArbolBinario {
                     printTree(node.getRight(), prefix + (isleft ? "|  " : "   "), false);
                 }else{
                     System.out.println(prefix + (isleft ? "| " : "├──null"));
-                }
-            
+                }            
             }
         }
     }
@@ -55,6 +54,7 @@ public class ArbolBinario {
     }
 
     public Node getRoot(){
-    
+
+        return root;
     }
 }
