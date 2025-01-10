@@ -5,7 +5,7 @@ import Main.Materia.Controllers.ArbolRecorridos;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
-        //runArbolBinario();
+        runArbolBinario();
         runEjercicio3();
             }
         
@@ -20,7 +20,7 @@ public class App {
                 arbolBinario.insert(valores[i]);
             }
             arbolBinario.printTree();
-            lista = levels.listLeves(arbolBinario.getRoot());
+            lista = levels.listLevels(arbolBinario.getRoot());
             }
         
     public static void runArbolBinario(){
