@@ -1,12 +1,14 @@
 import Main.Ejercicio_03_listLevels.ListLevels;
+import Main.Materia.Controllers.ArbolAVL;
 import Main.Materia.Controllers.ArbolBinario;
 import Main.Materia.Controllers.ArbolRecorridos;
 
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
-        runArbolBinario();
-        runEjercicio3();
+        //runArbolBinario();
+        //runEjercicio3();
+        runArbolAVL();
             }
         
     private static void runEjercicio3() {
@@ -20,7 +22,7 @@ public class App {
                 arbolBinario.insert(valores[i]);
             }
             arbolBinario.printTree();
-            lista = levels.listLevels(arbolBinario.getRoot());
+            //lista = levels.listLevels(arbolBinario.getRoot());
             }
         
     public static void runArbolBinario(){
@@ -43,5 +45,14 @@ public class App {
          arbolRecorridos.InOrdenRecursivo(arbolBinario.getRoot());
     }
 
-
+    public static void runArbolAVL() {
+        ArbolAVL arbolAVL = new ArbolAVL();
+    
+        int[] valores = {10, 20, 15, 24, 9, 21, 23, 50, 25};
+    
+        for (int value : valores) {
+            arbolAVL.insert(value);
+            arbolAVL.printTree();
+        }
+    }
 }
